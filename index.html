@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Gadget Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Tech Gadget Store</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Tech Gadget Store</h2>
+        <p>Your ultimate destination for the latest gadgets and accessories.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We bring you the best tech gadgets at unbeatable prices. Quality and customer satisfaction are our top priorities.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="smartphone.jpg" alt="Product 1">
+                <h3>Smartphone</h3>
+                <p>$499.99</p>
+                <button onclick="addToCart('Smartphone', 499.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="wirelessheadphone.jpg" alt="Product 2">
+                <h3>Wireless Headphones</h3>
+                <p>$199.99</p>
+                <button onclick="addToCart('Wireless Headphones', 199.99)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="smartwatch.webp" alt="Product 3">
+                <h3>Smart Watch</h3>
+                <p>$299.99</p>
+                <button onclick="addToCart('Smart Watch', 299.99)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us at:</p>
+        <p>Email: chudasamadishant009@gmail.com</p>
+        <p>Phone: +91 9824947027</p>
+    </section>
+
+    <section class="cart hidden" id="cartSection">
+        <h2>Your Cart</h2>
+        <div id="cartItems">
+            <p>Your cart is empty.</p>
+        </div>
+        <p>Total: $<span id="cartTotal">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tech Gadget Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
